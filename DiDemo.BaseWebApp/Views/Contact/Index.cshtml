@@ -1,0 +1,28 @@
+﻿@model Infonetica.ContactApp.UI.Web.Models.ContactIndexModel
+
+@{
+    ViewBag.Title = "Contacts App";
+}
+
+<h2>All Contacts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add")
+</p>
+<table>
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Contacts) {
+    <tr>
+        <td>
+            @item.Id
+        </td>
+        <td>
+            @item.Name
+        </td>
+    </tr>
+}
+
+</table>
